@@ -1,0 +1,29 @@
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+.ant-modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+
+.ant-modal-footer{
+  border-top:none;
+  text-align: center;
+}
+
+.ant-layout-header{
+  background: #fff;
+  color: #666666;
+}

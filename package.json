@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "ui": "cross-env UMI_UI=1 umi dev",
+    "build": "cross-env UMI_ENV=dev umi build",
+    "debuggbuild": "cross-env COMPRESS=none UMI_ENV=dev umi build",
+    "product": "cross-env UMI_ENV=product umi build",
+    "analyze": "cross-env ANALYZE=1 umi build",
+    "test": "umi test",
+    "lint": "eslint --ext .js src mock tests",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@types/echarts": "^4.4.3",
+    "antd": "^4.0.3",
+    "cross-env": "^6.0.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "md5": "^2.2.1",
+    "qs": "^6.8.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "umi-request": "^1.2.8",
+    "video-react": "^0.14.1"
+  },
+  "devDependencies": {
+    "@umijs/preset-react": "^1.3.0",
+    "babel-eslint": "^9.0.0",
+    "echarts": "^4.6.0",
+    "echarts-for-react": "^2.0.15-beta.1",
+    "eslint": "5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "lint-staged": "^7.3.0",
+    "react-test-renderer": "^16.7.0",
+    "umi": "^3.0.10"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
