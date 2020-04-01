@@ -1,6 +1,3 @@
 {
-  "extends": "eslint-config-umi",
-  // "globals": {
-  //   "WxLogin": true
-  // }
+  "extends": "eslint-config-umi"
 }

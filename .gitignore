@@ -26,3 +26,4 @@ node_modules
 .vscode/launch.json
 /.vs
 .umirc.local.js
+.vscode

@@ -1,6 +1,4 @@
 import {defineConfig} from 'umi';
-
-// ref: https://umijs.org/config/
 const myRouter = require('./src/routers/index').globeRouters.routes;
 
 
@@ -18,9 +16,8 @@ export default defineConfig({
   },
   title: '测试项目',
   runtimePublicPath:true,
-  publicPath:'https://hguy/product/',// 正式地址
+  publicPath:'https://h5cdyguy/product/',// 正式地址
   routes: myRouter,
-  exportStatic: {},
   cssLoader:{},
   ignoreMomentLocale:true,
   define: {

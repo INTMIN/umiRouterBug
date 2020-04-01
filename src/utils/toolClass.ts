@@ -112,14 +112,6 @@ export function getLocalStorage() {
   return localStorage.getItem('token');
 }
 
-/**
- * @description w单位格式化
- * @export
- * @returns
- */
-export function Wformate(value: string | Number) {
-  return Number(value) > 10000 ? (Number(value) / 10000).toFixed(2) + 'w' : value;
-}
 
 export interface pieData {
   key?: Array<[]>;
@@ -143,4 +135,38 @@ export function pieDataFormat(data: pieData) {
     console.log(error);
   }
   return newData;
+}
+
+
+
+/**
+ * @description  小数转格式
+ * @export
+ * @param {type} params
+ */
+export function HFormat(value:Number|string) {
+  return Number(value) < 1 ? (Number(value)* 100).toFixed(2) + '%' : value;
+}
+
+/**
+ * @description w单位格式化
+ * @export
+ * @returns
+ */
+export function Wformate(value: string | Number,n:number|undefined) {
+  return Math.abs(Number(value)) > 10000 ? (Number(value) / 10000).toFixed(n===0? 0 : n||2) + 'w' : typeof(value)==="number"? Number(value).toFixed(n===0? 0 : n||2) :value;
+}
+
+
+/**
+ * @description  下载文件
+ * @export
+ * @param {type} params
+ */
+export function downLoadFile(url:string) {
+  const a = document.createElement('a');
+  const event =new MouseEvent('click');
+  a.download = '';
+  a.href = url;
+  a.dispatchEvent(event);
 }

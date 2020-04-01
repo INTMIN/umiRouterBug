@@ -2,7 +2,7 @@ import {message,Modal} from 'antd';
 import {history} from 'umi';
 export function errorReturn(response){
   if(typeof response.errcode!== "undefined" && response.errcode!==null){
-    if(response.errcode ===20001){
+    if(response.errcode ===201){
       // message.warn('登录超时')
       Modal.warning({
         title: '登录超时',

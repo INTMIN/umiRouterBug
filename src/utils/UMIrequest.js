@@ -56,11 +56,6 @@ const request = extend({
 request.use(async (ctx, next) => {
   const { req } = ctx;
   const token = localStorage.getItem('token')
-  // const { url, options } = req;
-
-  // if ( url.indexOf('/api') !== 0 ) {
-  //   ctx.req.url = `/api/v1/${url}`;
-  // }
 
   const { options } = req;
   let newOptions = {...options };
